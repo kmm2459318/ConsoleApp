@@ -6,12 +6,11 @@ using AudioPlayer = GP2.AudioPlayer;
 
 namespace TurnBattle_CS
 {
-    internal enum BgmId
+    enum BgmId
     {
         None = -1,
     }
-
-    internal enum SeId
+    enum SeId
     {
         None = -1,
         Cursor,

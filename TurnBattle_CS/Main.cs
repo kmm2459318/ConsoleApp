@@ -2,11 +2,12 @@
 //      ターン制バトル メイン
 //======================================
 using System;    // ConsoleKey
+using System.ComponentModel.Design;
 using Utility = GP2.Utility;
 
 namespace TurnBattle_CS
 {
-    internal class TurnBattleMain
+    class TurnBattleMain
     {
         static int Main()
         {
@@ -44,7 +45,7 @@ namespace TurnBattle_CS
                 );
             Character boss = new Character(
                 255,        // HP
-                 0,         // MP
+                 30,         // MP
                  50,        // 攻撃力
                  "まおう",  // 名前
                 "　　Ａ＠Ａ\n" +   // アスキーアート
@@ -52,13 +53,19 @@ namespace TurnBattle_CS
                 );
             Character zako = new Character(
                 3,         // HP
-                0,         // MP
+                10,         // MP
                 2,         // 攻撃力
                 "スライム",// 名前
                 "／・Д・＼\n" + // アスキーアート
                 "～～～～～"
                 );
-            TurnBattle btl = new TurnBattle(player, boss);
+            Character chuboss = new Character(
+                50,
+                20,
+                10,
+                "おこ",
+                "(#・∀・)");
+            TurnBattle btl = new TurnBattle(player, chuboss);
 
             btl.Start();
             btl.Intro();

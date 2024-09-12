@@ -6,7 +6,7 @@ using Utility = GP2.Utility;
 
 namespace TurnBattle_CS
 {
-    internal enum Command
+    enum Command
     {
         Fight,  // たたかう
         Spell,  // じゅもん
@@ -14,7 +14,7 @@ namespace TurnBattle_CS
         Max,
     }
 
-    internal static class CommandUI
+    static class CommandUI
     {
         static string[] commandName = new string[]
         {
@@ -62,12 +62,13 @@ namespace TurnBattle_CS
             }
         }
     } // class CommandUI
-
-    internal static class CommandAI
+    static class CommandAI
     {
         // 敵のコマンド取得
         public static Command GetEnemyCommand()
         {
+
+            return Command.Spell;
             return Command.Fight;
         }
     } // class CommandAI

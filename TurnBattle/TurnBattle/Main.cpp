@@ -33,6 +33,7 @@ void game()
 	Character player;
 	Character boss;
 	Character zako;
+	Character tyuboss;
 	TurnBattle btl;
 
 	SetCharacter(&player,
@@ -58,12 +59,13 @@ void game()
 		"Å`Å`Å`Å`Å`"
 	);
 	SetCharacter(&tyuboss,
-		100,
-		0,
-		25,
-		"Ç‚ÇÈïv",)
+		50,
+		20,
+		10,
+		"Ç®Ç±",
+		"(#ÅEÅÕÅE)");
 
-	SetTurnBattle(&btl, &player, &boss);
+	SetTurnBattle(&btl, &player, &tyuboss);
 	StartTurnBattle(&btl);
 	IntroTurnBattle(&btl);
 	bool isEnd = false;
